@@ -22,10 +22,9 @@ sequenceDiagram
   ac->>q: Connect Flow:<br />transfer to Connect queue
   q->>v: Connect Flow:<br />begin media stream
   q->>c: Caller hangs up
-  q->>SQS: Lambda:<br />record audio details
+  q->>SQS: Lambda: record audio details
   par Lambda
     SQS->>S3: Receive SQS trigger
-  and
       v->>S3: Fetch, transcode, deposit audio
   end
 ```
