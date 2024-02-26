@@ -1,0 +1,3 @@
+config:
+  sqs_queue_url: ""
+  s3_bucket_name: ""
